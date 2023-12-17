@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        table {
+            width: 50%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <h1>Todo List</h1>
+    
+    <form id="todoForm">
+        <label for="task">Task:</label>
+        <input type="text" id="task" name="task" required>
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" required>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+
+        <label>
+            <input type="checkbox" id="completed" name="completed"> Completed
+        </label>
+
+        <label>
+            <input type="radio" name="category" value="work"> Work
+        </label>
+        <label>
+            <input type="radio" name="category" value="personal"> Personal
+        </label>
+
+        <button type="button" onclick="addTask()">Add Task</button>
+    </form>
+
+    <table id="taskTable">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Priority</th>
+                <th>Completed</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
